@@ -64,4 +64,9 @@ class MainController extends Controller
     {
         echo "Assinatura realizada com sucesso!";
     }
+
+    public function dashboard()
+    {
+        echo "Dashboard!";
+    }
 }
