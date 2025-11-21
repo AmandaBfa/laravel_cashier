@@ -25,6 +25,22 @@
         <p class="display-6">Dashboard!</p>
     </div>
 
+    <hr>
+
+    <div class="text-center">
+        <p>Subscrição termina em: <strong>{{ $subscription_end }}</strong></p>
+    </div>
+
+    <hr>
+
+    @foreach ($invoices as $invoice)
+        <div class="text-center mt-4">
+            <div class="ms-3">
+                <a href="{{ route('invoice.download', $invoice->id) }}" class="btn btn-primary">Download PDF</a>
+            </div>
+        </div>
+    @endforeach
+
 </body>
 
 </html>
